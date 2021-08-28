@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import lead
+from Shortner.views import navigate
+from Shortner.views import generator_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('<str:key>', lead),
+    path('', generator_view),
+    path('<str:key>/', navigate),
 ]

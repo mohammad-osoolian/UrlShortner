@@ -1,3 +1,6 @@
+import math
+
+
 class URLGenerator:
     BASE = 62
     UPPERCASE_OFFSET = 55

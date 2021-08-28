@@ -1,0 +1,8 @@
+<form method="post">{% csrf_token %}
+    {{ form }}
+    <input type="submit">
+</form>
+
+{% if shotened_url %}
+    <h1><a href="{{ shotened_url }}">{{ shotened_url }}</a></h1>
+{% endif %}
