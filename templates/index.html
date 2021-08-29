@@ -1,8 +1,23 @@
-<form method="post">{% csrf_token %}
-    {{ form }}
-    <input type="submit">
-</form>
+{% load static %}
 
-{% if shotened_url %}
-    <h1><a href="{{ shotened_url }}">{{ shotened_url }}</a></h1>
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'index-style.css' %}">
+</head>
+<body>
+<form method="post">{% csrf_token %}
+    <label>Paste URL and click on the button!</label>
+    {{ form.url }}
+    <button class="btn-primary">Get shortened URL</button>
+</form>
+{% if shortened_url %}
+    <div id="shortened-link" class="alert alert-success"><a href="{{ shortened_url }}">{{ shortened_url }}</a></div>
 {% endif %}
+</body>
+</html>

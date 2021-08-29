@@ -1,0 +1,32 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e2125;
+    color: white;
+}
+form
+{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form>*
+{
+    margin: 10px;
+}
+form>textarea
+{
+    font-size: 18px;
+    width: 100vh;
+    height: 10vh;
+}
+
+#shortened-link
+{
+    font-size: 20px;
+}

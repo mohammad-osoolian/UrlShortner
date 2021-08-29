@@ -13,7 +13,7 @@ def generator_view(request):
     if request.method == 'POST':
         if form.is_valid():
             url = form.save()
-            context['shotened_url'] = request.build_absolute_uri(url.key)
+            context['shortened_url'] = request.build_absolute_uri(url.key)
             form = UrlForm()
     context['form'] = form
     return render(request, 'index.html', context)
